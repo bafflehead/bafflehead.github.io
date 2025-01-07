@@ -1,0 +1,228 @@
+/* Modern Color Palette */
+:root {
+  --primary-color: #2d3436;
+  --secondary-color: #0984e3;
+  --accent-color: #00cec9;
+  --text-color: #2d3436;
+  --light-bg: #f5f6fa;
+  --white: #ffffff;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img.nav-logo {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
+}
+
+/* Welcome Section */
+.welcome-section {
+  background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/baffleheadNoBack.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.welcome-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.typing-container {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.dynamic-text {
+  color: var(--secondary-color);
+  border-right: 3px solid var(--secondary-color);
+  padding-right: 5px;
+  animation: blink 0.7s infinite;
+}
+
+/* Sections Common Styles */
+section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* About Section */
+.about-section {
+  background-color: var(--white);
+}
+
+.journey-content,
+.skills-grid,
+.tech-stack {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.journey-content:hover,
+.skills-grid:hover,
+.tech-stack:hover {
+  transform: translateY(-5px);
+}
+
+/* Projects Section */
+.projects-section {
+  background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Thank You Section */
+.thank-you-section {
+  background-color: var(--white);
+}
+
+.thank-you-text {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--white);
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 2rem 0;
+}
+
+/* Animations */
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--secondary-color);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .typing-container {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
