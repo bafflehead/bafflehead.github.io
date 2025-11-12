@@ -34,11 +34,15 @@ function initNavigation() {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     const navbar = document.querySelector('.navbar');
+    const body = document.body;
 
     // Mobile menu toggle
     hamburger?.addEventListener('click', () => {
+        const isActive = !hamburger.classList.contains('active');
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+        body.classList.toggle('no-scroll', isActive);
+        hamburger.setAttribute('aria-expanded', String(isActive));
     });
 
     // Close mobile menu when clicking on a link
@@ -46,6 +50,8 @@ function initNavigation() {
         link.addEventListener('click', () => {
             hamburger?.classList.remove('active');
             navMenu.classList.remove('active');
+            body.classList.remove('no-scroll');
+            hamburger?.setAttribute('aria-expanded', 'false');
         });
     });
 
@@ -339,36 +345,38 @@ function debounce(func, wait, immediate) {
     };
 }
 
-// Mouse tracking for interactive effects
-document.addEventListener('mousemove', debounce((e) => {
-    const cursor = { x: e.clientX, y: e.clientY };
-    
-    // Subtle parallax effect for floating cards
-    const floatingCards = document.querySelectorAll('.floating-card');
-    floatingCards.forEach((card, index) => {
-        const rect = card.getBoundingClientRect();
-        const cardCenter = {
-            x: rect.left + rect.width / 2,
-            y: rect.top + rect.height / 2
-        };
+// Mouse tracking for interactive effects (pointer precision only)
+if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+    document.addEventListener('mousemove', debounce((e) => {
+        const cursor = { x: e.clientX, y: e.clientY };
         
-        const distance = Math.sqrt(
-            Math.pow(cursor.x - cardCenter.x, 2) + 
-            Math.pow(cursor.y - cardCenter.y, 2)
-        );
-        
-        if (distance < 200) {
-            const angle = Math.atan2(cursor.y - cardCenter.y, cursor.x - cardCenter.x);
-            const strength = (200 - distance) / 200 * 10;
-            const moveX = Math.cos(angle) * strength;
-            const moveY = Math.sin(angle) * strength;
+        // Subtle parallax effect for floating cards
+        const floatingCards = document.querySelectorAll('.floating-card');
+        floatingCards.forEach((card, index) => {
+            const rect = card.getBoundingClientRect();
+            const cardCenter = {
+                x: rect.left + rect.width / 2,
+                y: rect.top + rect.height / 2
+            };
             
-            card.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        } else {
-            card.style.transform = 'translate(0px, 0px)';
-        }
-    });
-}, 16));
+            const distance = Math.sqrt(
+                Math.pow(cursor.x - cardCenter.x, 2) + 
+                Math.pow(cursor.y - cardCenter.y, 2)
+            );
+            
+            if (distance < 200) {
+                const angle = Math.atan2(cursor.y - cardCenter.y, cursor.x - cardCenter.x);
+                const strength = (200 - distance) / 200 * 10;
+                const moveX = Math.cos(angle) * strength;
+                const moveY = Math.sin(angle) * strength;
+                
+                card.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            } else {
+                card.style.transform = 'translate(0px, 0px)';
+            }
+        });
+    }, 16));
+}
 
 // Add some interactive hover effects
 document.addEventListener('DOMContentLoaded', function() {

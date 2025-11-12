@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#023859">
     <title>Robert Lewis Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -27,36 +28,36 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar glass-morphism">
+    <nav class="navbar glass-morphism" aria-label="Primary">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/RLGif.webp" alt="RL Galaxy" class="nav-logo-img">
+                <img src="assets/RLGif.webp" alt="RL Galaxy animated logo" class="nav-logo-img" loading="lazy" decoding="async">
             </div>
-            <ul class="nav-menu">
+            <ul id="primary-navigation" class="nav-menu" role="menubar">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link" role="menuitem">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#about" class="nav-link" role="menuitem">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#projects" class="nav-link" role="menuitem">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#skills" class="nav-link" role="menuitem">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#deep-dive" class="nav-link">Deep Dive</a>
+                    <a href="#deep-dive" class="nav-link" role="menuitem">Deep Dive</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link" role="menuitem">Contact</a>
                 </li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
 
@@ -67,7 +68,7 @@
             <div class="hero-background"></div>
             <div class="hero-content">
                 <div class="hero-owl-container">
-                    <img src="assets/OWL No BG.webp" alt="Music Owl" class="hero-owl">
+                    <img src="assets/OWL No BG.webp" alt="Stylized owl illustration" class="hero-owl" loading="lazy" decoding="async">
                 </div>
                 <div class="hero-text">
                     <h1 class="hero-title">
@@ -155,7 +156,7 @@
                     <div class="about-visual">
                         <div class="about-image glass-morphism">
                             <div class="image-placeholder">
-                                <img src="assets/Pro Photo.webp" alt="profile-photo" class="profile-photo">
+                                <img src="assets/Pro Photo.webp" alt="Portrait of Robert Lewis" class="profile-photo" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="experience-timeline">
@@ -559,7 +560,7 @@
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-phone"></i>
-                                    <span>+1 (555) 123-4567</span>
+                                    <span>+1 (330) 974-7589</span>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-map-marker-alt"></i>
