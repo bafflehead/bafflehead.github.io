@@ -1,331 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Robert Lewis - Developer Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Custom CSS -->
-    <link href="styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="assets/baffleheadNoBack.svg" alt="Logo" class="nav-logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#welcome">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Lewis Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <div class="logo-container">
+                <img src="assets/RL Galaxy Enhanced.webp" alt="RL Galaxy Banner" class="splash-logo">
+            </div>
+            <div class="loading-animation">
+                <div class="loading-bar"></div>
+            </div>
         </div>
-      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-morphism">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/RLGif.webp" alt="RL Galaxy" class="nav-logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#deep-dive" class="nav-link">Deep Dive</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
-    <!-- Welcome Section -->
-    <section id="welcome" class="welcome-section">
-      <div class="container">
-        <div class="row min-vh-100 align-items-center">
-          <div class="col-12 text-center">
-            <h1 data-aos="fade-up">
-              Welcome to the Robert Lewis Developer Page
-            </h1>
-            <div
-              class="typing-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <span class="static-text">I am a </span>
-              <span class="dynamic-text"></span>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <div class="hero-owl-container">
+                    <img src="assets/OWL No BG.webp" alt="Music Owl" class="hero-owl">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm Robert Lewis - Data Professional and AI Enthusiast
+                    </h1>
+                    <p class="hero-subtitle">
+                        Charting a map to the world of tomorrow by analyzing
+                        the data of today. Through the use of advanced analytics, machine learning, 
+                        and artificial intelligence we can plot a course to a brighter future.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary glass-morphism">
+                            <i class="fas fa-rocket"></i>
+                            View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary glass-morphism">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card glass-morphism">
+                        <div class="card-content">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Data Analytics</h3>
+                        </div>
+                    </div>
+                    <div class="floating-card glass-morphism">
+                        <div class="card-content">
+                            <i class="fas fa-brain"></i>
+                            <h3>Machine Learning</h3>
+                        </div>
+                    </div>
+                    <div class="floating-card glass-morphism">
+                        <div class="card-content">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI Solutions</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="owl-bg owl-bg-1">
+                <img src="assets/OWL No BG.webp" alt="Owl Background" class="owl-background">
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient">About Me</h2>
+                    <p class="section-subtitle">A passionate story teller who uses data to weave compelling narratives.</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="about-card glass-morphism">
+                            <h3>My Journey</h3>
+                            <p>
+                                A little over four years ago I found myself in a position where I needed to work
+                                through vast amounts of data to make informed business decisions. I was responsible
+                                for managing the production of an entire customer fulfillment center and only knew 
+                                the basics of analyzing and interpreting data. I quickly realized that to be successful
+                                in this role that data would become my most valuable asset. So I got to work. I started collecting, cleaning,
+                                and analyzing data so that it could illuminate the path to success. I began building dashboards,
+                                reports, and tools that allow me see beyond the numbers and chart a course for the future.
+                                Nearly half a decade later I am still on that journey. With every dataset charting the course
+                                into what was once unknown territory. Today, I may be unsure of what secrets
+                                the future holds, but I am confident that through careful planning and analyis that data will
+                                chart a course to the stars.
+                            </p>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <h4>Ad Astra Per Aspera</h4>
+                                    <p>-Robert Lewis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="about-image glass-morphism">
+                            <div class="image-placeholder">
+                                <img src="assets/Pro Photo.webp" alt="profile-photo" class="profile-photo">
+                            </div>
+                        </div>
+                        <div class="experience-timeline">
+                            <div class="timeline-item glass-morphism">
+                                <div class="timeline-content">
+                                    <h4>Inventory Control Manager</h4>
+                                    <p>Macy's Logistics and Operations | 2021 - Present</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- My Journey -->
-        <div class="row mb-5" data-aos="fade-up">
-          <div class="col-12">
-            <h3>My Journey</h3>
-            <div class="journey-content">
-              <p>
-                About six years ago, I started my journey into tech as a
-                self-taught developer.
-              </p>
-              <p>
-                I started with Python and have since expanded my skills into
-                several languages and frameworks.
-              </p>
-              <p>
-                I attended Youngstown State University achieving an Associates
-                Degree and I am currently pursuing a Master&apos;s Degree with
-                Western Governors University.
-              </p>
-              <p>
-                I have spent countless hours learning and growing my skills to
-                include a wide range of technologies and building projects with
-                them.
-              </p>
-              <p>
-                My current employer Macy&apos;s Logistics and Operations has
-                been kind enough to give me the opportunity to work with them on
-                several tech projects.
-              </p>
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="owl-bg owl-bg-2">
+                <img src="assets/OWL No BG.webp" alt="Owl Background" class="owl-background">
             </div>
-          </div>
-        </div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient">Projects Past and Present</h2>
+                    <p class="section-subtitle">What I've built and what I am currently building</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card glass-morphism">
+                        <div class="project-image">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Inventory Analytics Dashboard</h3>
+                            <p>
+                                Dashboard providing real-time insights into inventory levels,
+                                capacity utilization, and order fulfillment rates using Python
+                                and web technologies.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card glass-morphism">
+                        <div class="project-image">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Inventory Optimizer</h3>
+                            <p>
+                                Developed a Python-based tool that uses algorithms
+                                to optimize inventory levels, suggests slotting locations based on
+                                optimized warehouse placement, and reports current optimization metrics.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">OR-Tools</span>
+                                <span class="tag">Excel</span>
+                                <span class="tag">PyTorch</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card glass-morphism">
+                        <div class="project-image">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Auto Reporter</h3>
+                            <p>
+                                Created an automated report delivery system using Python and VBA
+                                that generates and emails daily, weekly, and monthly reports to stakeholders.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">VBA</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card glass-morphism">
+                        <div class="project-image">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Inventory Data Pipeline</h3>
+                            <p>
+                                Designed and implemented a scalable data pipeline processing 
+                                ERP data into a database for analytics and reporting in Excel and Tableau.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">ETL</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Database Design</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="github">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" title="live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Skills -->
-        <div class="row mb-5" data-aos="fade-up">
-          <div class="col-12">
-            <h3>Skills</h3>
-            <div class="skills-grid">
-              <p>
-                Frontend design and development. Backend development. Database
-                design and management.
-              </p>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="owl-bg owl-bg-3">
+                <img src="assets/OWL No BG.webp" alt="Owl Background" class="owl-background">
             </div>
-          </div>
-        </div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient">Technical Skills</h2>
+                    <p class="section-subtitle">My toolkit for data science and AI</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category glass-morphism">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">VBA</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">SQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category glass-morphism">
+                        <div class="category-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>Machine Learning</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">TensorFlow/Keras</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">PyTorch</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Scikit-learn</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category glass-morphism">
+                        <div class="category-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Data Visualization</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Tableau</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Power BI</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Matplotlib/Seaborn</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">D3.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="78"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category glass-morphism">
+                        <div class="category-header">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Cloud & Tools</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">GitHub</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Google Cloud</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="82"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Docker</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Visual Studio</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Frontend & Backend -->
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-6 mb-4">
-            <h3>Frontend</h3>
-            <div class="tech-stack">
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Angular</li>
-                <li>Tailwind</li>
-                <li>Bootstrap</li>
-              </ul>
+        <!-- Deep Dive Section -->
+        <section id="deep-dive" class="deep-dive-section">
+            <div class="owl-bg owl-bg-4">
+                <img src="assets/OWL No BG.webp" alt="Owl Background" class="owl-background">
             </div>
-          </div>
-          <div class="col-md-6 mb-4">
-            <h3>Backend</h3>
-            <div class="tech-stack">
-              <ul className="list-disc list-inside">
-                <li>C#</li>
-                <li>.NET</li>
-                <li>Python</li>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-                <li>PostgreSQL</li>
-                <li>MySQL</li>
-              </ul>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient">Deep Dive</h2>
+                    <p class="section-subtitle">Exploring the depths of data science</p>
+                </div>
+                <div class="deep-dive-content">
+                    <div class="deep-dive-tabs">
+                        <button class="tab-button active" data-tab="methodology">Methodology</button>
+                        <button class="tab-button" data-tab="research">Research</button>
+                        <button class="tab-button" data-tab="insights">Insights</button>
+                        <button class="tab-button" data-tab="future">Future Vision</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="methodology">
+                        <div class="content-card glass-morphism">
+                            <h3>My Data Science Methodology</h3>
+                            <div class="methodology-steps">
+                                <div class="step-item">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Problem Definition</h4>
+                                        <p>Understanding the business context and defining clear, measurable objectives.</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Data Exploration</h4>
+                                        <p>Comprehensive EDA to understand data quality, patterns, and relationships.</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Feature Engineering</h4>
+                                        <p>Creating meaningful features that capture the underlying patterns in data.</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Model Development</h4>
+                                        <p>Building and iterating on models with proper validation strategies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="research">
+                        <div class="content-card glass-morphism">
+                            <h3>Current Research Interests</h3>
+                            <div class="research-areas">
+                                <div class="research-item">
+                                    <i class="fas fa-microscope"></i>
+                                    <h4>Explainable AI</h4>
+                                    <p>Developing interpretable machine learning models for critical decision-making processes.</p>
+                                </div>
+                                <div class="research-item">
+                                    <i class="fas fa-network-wired"></i>
+                                    <h4>Graph Neural Networks</h4>
+                                    <p>Exploring GNNs for complex relational data analysis and recommendation systems.</p>
+                                </div>
+                                <div class="research-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h4>Federated Learning</h4>
+                                    <p>Privacy-preserving machine learning for distributed data sources.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="insights">
+                        <div class="content-card glass-morphism">
+                            <h3>Key Insights & Learnings</h3>
+                            <div class="insights-list">
+                                <div class="insight-item">
+                                    <h4>Data Quality > Model Complexity</h4>
+                                    <p>Clean, relevant data with simple models often outperforms complex models on poor data.</p>
+                                </div>
+                                <div class="insight-item">
+                                    <h4>Feature Engineering is Art</h4>
+                                    <p>Domain knowledge combined with creative feature engineering drives model performance.</p>
+                                </div>
+                                <div class="insight-item">
+                                    <h4>Validation Strategy Matters</h4>
+                                    <p>Proper cross-validation and holdout strategies are crucial for reliable model assessment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="future">
+                        <div class="content-card glass-morphism">
+                            <h3>Future Vision</h3>
+                            <div class="vision-content">
+                                <p>
+                                    The future of data science lies in democratization and automation. I envision a world where 
+                                    advanced analytics are accessible to everyone, where AI assists in model development, 
+                                    and where ethical considerations are built into every algorithm.
+                                </p>
+                                <div class="future-trends">
+                                    <div class="trend-item">
+                                        <i class="fas fa-robot"></i>
+                                        <span>AutoML Evolution</span>
+                                    </div>
+                                    <div class="trend-item">
+                                        <i class="fas fa-balance-scale"></i>
+                                        <span>Ethical AI</span>
+                                    </div>
+                                    <div class="trend-item">
+                                        <i class="fas fa-globe"></i>
+                                        <span>Real-time Analytics</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Projects & Experience</h2>
-        <div class="row">
-          <!-- Project Card 1 -->
-          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-            <div class="project-card">
-              <h3>Experience with Macy's Logistics and Operations</h3>
-              <p>
-                My current employer who has been kind enough to give me the
-                opportunity to work with them on tech projects.
-              </p>
-              <ul className="list-disc list-inside">
-                <li>
-                  I have worked with cross-functional teams to automate and
-                  improve processes as well as reporting and data analysis.
-                </li>
-                <li>
-                  Developed dashboards and reporting tools to help the team make
-                  data-driven decisions.
-                </li>
-                <li>
-                  Worked with databases to create and update reports and
-                  dashboards.
-                </li>
-                <li>
-                  Developed tools to improve how warehouse inventory is tracked,
-                  slotted, and maintained.
-                </li>
-              </ul>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-gradient">Get In Touch</h2>
+                    <p class="section-subtitle">If you find yourself in need of a cartographer to navigate
+                        a path to the stars, don't hesitate to reach out!
+                    </p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card glass-morphism">
+                            <h3>Ways to Reach Me</h3>
+                            <p>
+                                If you made it this far I want to express my sincerest gratitude fo
+                                for taking the time to explore my portfolio. Whether you have a project in mind,
+                                a question about my work, or just want to say hello, I would love to hear from you!
+                            </p>
+                            <div class="contact-items">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Rlewis1286@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+1 (555) 123-4567</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Hubbard, Ohio</span>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link glass-morphism" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link glass-morphism" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link glass-morphism" title="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link glass-morphism" title="Blog">
+                                    <i class="fas fa-blog"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- Project Card 2 -->
-          <div
-            class="col-lg-4 col-md-6 mb-4"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="project-card">
-              <h3>BaffleLabs Argos Series</h3>
-              <p>
-                A series of work productivity projects that are currently in
-                development.
-              </p>
-              <ul>
-                <li>
-                  Hyperion - A data collection and analytics tool that allows
-                  for the tracking of data and the ability to create reports and
-                  dashboards to optimize the work flow of the team.
-                </li>
-                <li>
-                  Sophrosyne - A project management tool that allows for the
-                  tracking of tasks and time frames as well as other project
-                  management features.
-                </li>
-                <li>
-                  Ponos - A tool for automating processes and workflows
-                  customized to the needs of the team.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Project Card 3 -->
-          <div
-            class="col-lg-4 col-md-6 mb-4"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="project-card">
-              <h3>Current Projects</h3>
-              <p>
-                Current interest and projects involving AI and machine learning.
-              </p>
-              <ul>
-                <li>
-                  The use of AI within operations and warehouse management to
-                  improve operations.
-                </li>
-                <li>
-                  Fine tuning AI models to include custom data that is relevant
-                  to the operations of the warehouse.
-                </li>
-                <li>
-                  Using AI and machine learning for data collection and
-                  analysis.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Thank You Section -->
-    <section id="thank-you" class="thank-you-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center" data-aos="fade-up">
-            <h2 class="section-title">Thank You</h2>
-            <p class="thank-you-text">
-              If you have made it this far, please accept my sincerest
-              gratitude.
-            </p>
-            <p class="thank-you-text">
-              I appreciate you taking the time to explore my page and learn
-              about me and my journey in software development.
-            </p>
-            <p class="thank-you-text">
-              Whether you&apos;re a potential employer, collaborator, or fellow
-              developer, I&apos;m always excited to connect and discuss new
-              opportunities.
-            </p>
-            <p class="thank-you-text">
-              If you think I would be a good fit for your team or project,
-              please don&apos;t hesitate to reach out using the contact
-              information below.
-            </p>
-            <p class="thank-you-text">
-              Let&apos;s create something amazing together!
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">Contact</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-8 text-center">
-            <div class="social-links" data-aos="fade-up">
-              <a href="mailto:rlewis1286@gmail.com" class="social-link">
-                <i class="bi bi-envelope-fill"></i> Email
-              </a>
-              <a
-                href="https://github.com/bafflehead"
-                class="social-link"
-                target="_blank"
-              >
-                <i class="bi bi-github"></i> GitHub
-              </a>
-              <a
-                href="https://linkedin.com/in/bobby-lewis-58114a1ba"
-                class="social-link"
-                target="_blank"
-              >
-                <i class="bi bi-linkedin"></i> LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <p>Created and Designed by: Robert Lewis</p>
-          </div>
+    <footer class="footer glass-morphism">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>Created: 2025 Designed and built by Robert Lewis</p>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Custom JS -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
